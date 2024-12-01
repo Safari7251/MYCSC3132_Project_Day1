@@ -47,7 +47,7 @@ echo "<br>";
 showTable("employee",$connect);
 
 
-function showTable1($name,$connect,$colnames){
+function showTable1($e_name,$connect,$colnames){
     try {
        $sql = "SELECT ";
         for($i=0; $i<sizeof($colnames)-1; $i++){
@@ -91,5 +91,5 @@ function showTable1($name,$connect,$colnames){
     }
     }
     echo "<br>";
-    showTable1("student",$connect,["name","course"]);
+    showTable1("employee",$connect,["name","subject"]);
 ?>
