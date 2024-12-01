@@ -2,7 +2,7 @@
 require_once 'dbconf.php';
 
 
-function showTable($tname,$connect){
+function showTable($e_name,$connect){
 try {
    $sql = "SELECT * FROM $e_name";
     
