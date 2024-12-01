@@ -53,7 +53,7 @@ function showTable1($name,$connect,$colnames){
         for($i=0; $i<sizeof($colnames)-1; $i++){
             $sql.=$colnames[$i].",";
         }
-      $sql.=$colnames[sizeof($colnames)-1]." FROM $tname "; 
+      $sql.=$colnames[sizeof($colnames)-1]." FROM $e_name "; 
 
       $result = mysqli_query($connect, $sql);
      
