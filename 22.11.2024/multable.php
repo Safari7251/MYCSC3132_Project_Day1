@@ -44,10 +44,10 @@ catch (Exception $e) {
 }
 showTable("student",$connect);
 echo "<br>";
-showTable("teacher",$connect);
+showTable("employee",$connect);
 
 
-function showTable1($tname,$connect,$colnames){
+function showTable1($name,$connect,$colnames){
     try {
        $sql = "SELECT ";
         for($i=0; $i<sizeof($colnames)-1; $i++){
@@ -91,5 +91,5 @@ function showTable1($tname,$connect,$colnames){
     }
     }
     echo "<br>";
-    showTable1("teacher",$connect,["name","subject"]);
+    showTable1("student",$connect,["name","course"]);
 ?>
