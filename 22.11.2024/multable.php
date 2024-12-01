@@ -4,7 +4,7 @@ require_once 'dbconf.php';
 
 function showTable($tname,$connect){
 try {
-   $sql = "SELECT * FROM $tname";
+   $sql = "SELECT * FROM $e_name";
     
       
   $result = mysqli_query($connect, $sql);
