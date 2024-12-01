@@ -1,3 +1,4 @@
+
 <?php
 require_once 'dbconf.php';
 
@@ -91,5 +92,7 @@ function showTable1($e_name,$connect,$colnames){
     }
     }
     echo "<br>";
-    showTable1("employee",$connect,["name","subject"]);
+    showTable1("employee",$connect,["e_name","sex"]);
+    echo "<br>";
+    showTable1("student",$connect,["age","course"]);
 ?>
