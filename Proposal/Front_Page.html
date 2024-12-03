@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart_Reload_Zone</title>
+
+   
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        .container {
+            width: 80%; /* Adjust width as needed */
+            padding: 20px;
+            background: #8BC34A; /* Peaceful green background */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            margin-top: 20px; /* Space from top of the page */
+            margin-left: auto;
+            margin-right: auto; /* Center the container horizontally */
+        }
+
+        /* Primary Heading (H1) in red */
+        h1 {
+            font-family: 'Roboto', sans-serif; 
+            font-size: 32px; /* Larger font for emphasis */
+            color: #D32F2F; /* Deep red */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtitle shadow for depth */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        /* Secondary Heading (H2) in a lighter red */
+        h2 {
+            font-size: 24px; /* Slightly smaller for secondary emphasis */
+            color: #FF5252; /* Bright red */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin-top: 40px; /* Space above the heading */
+        }
+
+        p {
+            font-size: 14px; /* Small font size for the paragraph */
+            color: #333; /* Dark color for the paragraph */
+            margin-top: 10px; /* Space above the paragraph */
+        }
+
+        .top-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex; /* Arrange buttons in a row */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .top-buttons button {
+            background: #6c757d; /* Subtle dark gray */
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s;
+        }
+
+        .top-buttons button:hover {
+            background: #495057; /* Darker gray on hover */
+        }
+
+        /* Input Fields for Email and Password */
+        .login-box {
+            width: 80%; /* Adjust the width as needed */
+            padding: 20px;
+            background: #fff; /* White background for the login section */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            border-radius: 10px;
+            margin-top: 40px; /* Space above the box */
+            margin-left: auto;
+            margin-right: auto; /* Center the box horizontally */
+        }
+
+        .login-box input {
+            width: 100%; /* Full width input fields */
+            padding: 10px;
+            margin-bottom: 20px; /* Space between inputs */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-box button {
+            width: 100%; /* Full width button */
+            padding: 10px;
+            background: #8BC34A; /* Green background for the submit button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #6c9e3d; /* Darker green */
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .final-paragraph {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .final-paragraph p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Reload Zone</h1>
+        <h2>e-link Stationery</h2>
+        <div class="top-buttons">
+            <button onclick="alert('Features coming soon!')">Features</button>
+            <button onclick="alert('Language options coming soon!')">Language</button>
+            <button onclick="alert('Contact us at info@example.com')">Contact Us</button>
+        </div>
+        <p>The e-link Reload System is a platform to simplify the process of recharging mobile accounts for users across multiple providers like Dialog, Mobitel, Hutch, and Airtel.</p>
+    </div>
+
+    <div class="login-box">
+        <input type="email" id="email" placeholder="Enter your Email ID" required>
+        <input type="password" id="password" placeholder="Enter your Password" required>
+        <button type="submit" onclick="validatePassword()">Login</button>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <div class="final-paragraph">
+        <p>
+            <strong>What is Smart Reload Zone?</strong><br>
+            Smart Reload Zone is a comprehensive platform to recharge mobile balance for various telecom networks in Sri Lanka, offering a seamless experience.
+        </p>
+    </div>
+
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+            if (!passwordRegex.test(password)) {
+                errorMessage.textContent = "Password must contain at least 8 characters, one lowercase letter, and one uppercase letter.";
+                return false;
+            } else {
+                errorMessage.textContent = "";
+                alert('Login successful!');
+            }
+        }
+    </script>
+</body>
+</html>
